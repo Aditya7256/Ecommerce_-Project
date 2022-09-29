@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Contact</title>
+</head>
+
+{% block mainmenu %}
+
+{% comment %} 
+{% if messages %}
+{% for message in messages %}
+<p {% if message.tags %}, class="alter alert-{{message.tags}} mb-5" {% endif %}>{{message}}</p>
+{% endfor %}
+{% endif %} 
+{% endcomment %}
+
+<h1>Contact Page</h1>
+
+<h3>Welcome to your contact</h3>
+
+{% block logo %}
+
+{% endblock logo %}
+
+{% endblock mainmenu %}

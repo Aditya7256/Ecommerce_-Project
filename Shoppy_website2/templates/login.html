@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Login_page
+{% endblock title %}
+{% block logo %}
+
+{% endblock logo %}
+
+{% block mainmenu %}
+<link rel="stylesheet" href="{% static 'css/login_css.css' %}">
+<div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login Form</div>
+    </div>
+    <div class="form-container">
+      <div class="form-inner">
+      <form action="#" method="POST" class="login">
+          {% csrf_token %}
+          <div class="field">
+            <input type="text" name="username" placeholder="username" required>
+            {{form.label_tag}}
+          </div>
+          <div class="field">
+            <input type="password" name="password" placeholder="Password" required>
+            {{form.label_tag}}
+          </div>
+          <div class="pass-link"><a href="#">Forgot password?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+          </div>
+          <div class="#">Not a member? <a href="{% url 'signup' %}">Signup now</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="{% static 'js/login_js.js' %}"></script>
+{% endblock mainmenu %}
+{% block footer %}
+
+{% endblock footer %}
